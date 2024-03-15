@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- START PROJECT by KAIQUE MICELI in 15/03/2024 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Components/style/style.css">
+    <title>Cupom na Mão</title>
+</head>
+<body>
+
+    <!-----------------------------NAV---------------------------->
+    <nav>
+        <section>
+            <img src="/src/Images/logocpm.png" alt="Cupom Na Mão" />
+        </section>
+        <section>
+            <fieldset>
+                <legend>Data</legend>
+                <input type="date" value="2024-03-15" id="date_select"/>
+            </fieldset>
+
+            <fieldset>
+                <legend>PDV</legend>
+                <select id="pdv_select">
+                    <option value="1" selected>01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Filtrar</legend>
+                <input type="text" id="filter_txt" placeholder="Valor, nome produto, código produto, cpf" />
+            </fieldset>
+            <button id="button_go">Procurar</button>
+
+        </section>
+    </nav>
+    <!-----------------------------/NAV--------------------------->
+
+    <!------------------------------MAIN-------------------------->
+    <main>
+
+        <div class="cpnList">
+
+        </div>
+
+        <div class="cpnView">
+
+        </div>
+
+
+    </main>
+
+    <!-----------------------------/MAIN-------------------------->
+    
+</body>
+</html>

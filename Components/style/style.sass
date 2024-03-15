@@ -1,0 +1,71 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+nav
+    background: #29352b
+    width: 100%
+    height: 80px
+    display: flex
+    justify-content: space-evenly
+
+    section
+        height: 100%
+        display: flex
+        align-items: center
+
+        &:nth-child(1)
+            img
+                height: 75px
+
+        &:nth-child(2)
+            width: 550px
+            display: flex
+            justify-content: space-between
+
+            fieldset
+                height: 50px
+                padding: 0 10px
+
+                input, select
+                    height: 100%
+
+
+            legend
+                color: #fff
+                font-size: .9rem
+
+        button
+            height: 50px
+            width: 100px
+            color: #c1c1c1
+            background: #1d4d07
+            border: none
+            margin-left: 10px
+            &:hover
+                background: #4cbb18
+            
+            
+main
+    width: 600px
+    height: calc(100vh - 80px)
+    border: 2px solid #000
+    margin: 0 auto
+    position: relative
+
+    .cpnList
+        width: 100%
+        height: 100%
+        background: #f7f2f7
+        position: absolute
+        z-index: 1
+
+    .cpnView
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: 2
+        background: #e5de9b
+        visibility: hidden
