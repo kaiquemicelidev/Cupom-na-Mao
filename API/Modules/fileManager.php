@@ -10,15 +10,17 @@
         $error = null; //se houver erro, reportar
 
         try{
-            $fileout = fopen('../CupomOut/cupom.txt','w+'); //Inicia um novo arquivo de saida ou zera o atual
+            $fileout = fopen('CupomOut/cupom.txt','w+'); //Inicia um novo arquivo de saida ou zera o atual
         }
         catch(Exception $e){
-            $error = $e->error();
+            $error = $e->getMessage();
 
         }
 
         for($ln = $linhaIn; $ln <= $linhaOut; $ln++){
+            fwrite($fileout,'<p>');
             fwrite($fileout,$arqEspelho[$ln]); //Escreve a linha do arqEspelho no arquivo de saida
+            fwrite($fileout,'<p>');
         }
         fclose($fileout);
 

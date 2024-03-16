@@ -19,6 +19,7 @@ header("Content-type: application/json; charset=utf-8");
 
 //IMPORTAÇÃO DA FUNÇÃO DE RASTREAMENTO
 include_once 'Modules/raster.php';
+include_once 'fileManager.php';
 
 if(isset($_GET['type'])){
     //SE EXISTE O GET TYPE, A API É VALIDA
@@ -49,7 +50,8 @@ if(isset($_GET['type'])){
             echo json_encode(array(
                 'FileExists' => true,
                 'ListCount' => $r['ArrayCount'],
-                'CupomList' => $r['CupomList']
+                'CupomList' => $r['CupomList'],
+                'FileUrl' => $r['FileUrl']
             ));
 
         }else{
@@ -60,7 +62,21 @@ if(isset($_GET['type'])){
         }
 
     }else if($_GET['type'] === 'select'){//Se o tipo é selecionar cupom
-        
+
+        $url = $_GET['fileUrl'];
+        $lineIn = $_GET['lineIn'];
+        $lineOut = $_GET['lineOut'];
+
+        if(fileManager($url, array($lineIn, $lineOut))){
+            echo json_encode(array(
+                'status'=> true
+            ));
+        }else{
+            echo json_encode(array(
+                'status'=> true
+            ));
+        }
+
     }
 
 }
