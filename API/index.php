@@ -59,6 +59,8 @@ if(isset($_GET['type'])){
             ));
         }
 
+    }else if($_GET['type'] === 'select'){//Se o tipo é selecionar cupom
+        
     }
 
 }

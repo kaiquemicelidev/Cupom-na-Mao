@@ -57,9 +57,10 @@ function rasterArqEspelho($file, $type, $filter){
                         'Prop' => array(
                             'CupomIn' => $CupomIn,
                             'CupomOut' => $CupomOut,
+                            'ArqUrl' => $file,
                             'CupomPay' => $CupomPay,
                             'CupomValue' => $CupomValue,
-                            'CupomDate' => $CupomDate
+                            'CupomDate' => $CupomDate,
                         )
                     );
                     array_push($cupomArray,$array);
@@ -73,6 +74,7 @@ function rasterArqEspelho($file, $type, $filter){
                             'Prop' => array(
                                 'CupomIn' => $CupomIn,
                                 'CupomOut' => $CupomOut,
+                                'ArqUrl' => $file,
                                 'CupomPay' => $CupomPay,
                                 'CupomValue' => $CupomValue,
                                 'CupomDate' => $CupomDate
