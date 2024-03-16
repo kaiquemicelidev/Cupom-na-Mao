@@ -2,7 +2,7 @@
 //header("Content-type: application/json; charset=utf-8");
 
 
-function rasterStartLines($file, $type, $filter){
+function rasterArqEspelho($file, $type, $filter){
     //Link para o arquivo importado na função
     $arqespelho = file($file);
 
@@ -146,13 +146,10 @@ function rasterStartLines($file, $type, $filter){
 
     }//FIM DO WHILE
 
-    array_push($cupomArray,array('Result' => $searchCount)); //Numero de resultados
-    return json_encode($cupomArray);
+    return array(
+        'ArrayCount' => $searchCount, //NUMERO DE RESULTADOS
+        'CupomList' =>  $cupomArray   //LISTA DE CUPONS DA PESQUISA
+    );
 
 
 }//FIM DA FUNCTION
-
-
-
-//echo rasterStartLines('arqEspelho.p9',1,'ARROZ');
-        

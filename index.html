@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Components/style/style.css">
+    <script src="Components/script/jquery-3.7.1.min.js"></script>
     <title>Cupom na Mão</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <section>
             <fieldset>
                 <legend>Data</legend>
-                <input type="date" value="2024-03-15" id="date_select"/>
+                <input type="date" min="2021-05-31" max="2021-06-02" value="2021-05-31" id="date_select"/>
             </fieldset>
 
             <fieldset>
@@ -56,3 +57,5 @@
     
 </body>
 </html>
+
+<script src="Components/script/api.js"></script>
